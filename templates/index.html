@@ -7,23 +7,55 @@
 {% endblock %}
 
 {% block body %}
-<div class="content">
-    <h1 style="text-align: center">Predict Your chances for Admission</h1>
-
-    <div class="form">
-        <form action="/predict" method="POST">
-            <input type="number" name="gre_score" id="gre_score" placeholder="GRE Score">
-            <input type="number" name="toefl_score" id="toefl_score" placeholder="TOEFL Score">
-            <input type="number" name="university_rating" id="university_rating" placeholder="University Rating">
-            <input type="number" name="sop" id="sop" placeholder="SOP Score">
-            <input type="number" name="lor" id="lor" placeholder="LOR Score">
-            <input type="number" name="cgpa" id="cgpa"placeholder="CGPA" step="any">
-            <select name="research" id="research">
-  <option value="yes">Yes</option>
-  <option value="no">No</option>
-</select>
-            <input type="submit" value="Predict">
-        </form>
+<div class="wrapper">
+    <div class="inner">
+      <form action="/predict" method="POST">
+        <h4>Predict Your chances for Admission</h4>
+        <label class="form-group">
+          <input type="number"  class="form-control" name="gre_score" id="gre_score" required>
+          <span>GRE Score</span>
+          <span class="border"></span>
+        </label>
+        <label class="form-group">
+          <input type="number"  class="form-control" name="toefl_score" id="toefl_score" required>
+          <span for="">TOEFL Score</span>
+          <span class="border"></span>
+        </label>
+        <label class="form-group">
+          <input type="number" class="form-control" name="university_rating" id="university_rating" required>
+          <span for="">University Rating</span>
+          <span class="border"></span>
+        </label>
+        <label class="form-group">
+          <input type="number"  class="form-control" name="sop" id="sop" required>
+          <span>SOP Score</span>
+          <span class="border"></span>
+        </label>
+        <label class="form-group">
+          <input type="number"  class="form-control" name="lor" id="lor" required>
+          <span for="">LOR Score</span>
+          <span class="border"></span>
+        </label>
+        <label class="form-group">
+          <input type="number" class="form-control" name="cgpa" step="any" id="cgpa" required>
+          <span for="">CGPA</span>
+          <span class="border"></span>
+        </label>
+          
+          <label class="form-group">
+            <select name="research" style="background:#39459b;" class="form-control"  id="research">
+              <option value="yes">Yes</option>
+              <option value="no">No</option>
+            </select>
+            <span for="">Research</span>
+            <span class="border"></span>
+          </label>
+        
+        <button>Predict
+          <i class="zmdi zmdi-arrow-right"></i>
+        </button>
+      </form>
     </div>
-</div>
+  </div>
+
 {% endblock %}
