@@ -102,7 +102,9 @@ p {
     margin-bottom: 55px;
     line-height: 1.8
 }
-
+h1 {
+    align-items: center;
+}
 .form-group {
     position: relative;
     display: block;
